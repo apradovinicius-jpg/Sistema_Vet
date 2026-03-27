@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-petroleo: #005f6b;
+  --color-salvia: #8da399;
+  --color-grafite: #333333;
+  --color-offwhite: #fdfdfd;
+  
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-offwhite text-grafite font-sans;
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  body {
+    background: white !important;
+  }
+  input, textarea {
+    border: none !important;
+    padding: 0 !important;
+    background: transparent !important;
+  }
+}
+
+.print-only {
+  display: none;
+}
